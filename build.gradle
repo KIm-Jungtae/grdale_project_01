@@ -1,32 +1,10 @@
-//plugins {
-//    id 'java'
-//}
-//
-//group 'org.kjt'
-//version '1.0-SNAPSHOT'
-//
-//repositories {
-//    mavenCentral()
-//}
-//
-//dependencies {
-//    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
-//    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
-//}
-//
-//test {
-//    useJUnitPlatform()
-//}
-
 buildscript {
     ext{
-        springBootVersion = '2.1.7.RELEASE'
+        springBootVersion = '2.1.9.RELEASE'
     }
     repositories {
         mavenCentral()
         jcenter()
-        maven { url "https://repo.spring.io/snapshot" }
-        maven { url "https://repo.spring.io/milestone" }
     }
     dependencies {
         classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
@@ -38,23 +16,34 @@ apply plugin: 'eclipse'
 apply plugin: 'org.springframework.boot'
 apply plugin: 'io.spring.dependency-management'
 
-//bootJar {
-//    enabled = false
-//}
-//
-//jar {
-//    enabled = true
-//}
-
-group 'org.kjt'
-version '1.0-SNAPSHOT'
+group 'com.kjt.book'
+version '1.0.4-SNAPSHOT-'+new Date().format("yyyyMMddHHmmss")
 sourceCompatibility = 1.8
 
 repositories {
     mavenCentral()
+    jcenter()
 }
 
 dependencies {
+//    compile('org.springframework.boot:spring-boot-starter-web')
+//    compile('org.projectlombok:lombok')
+//    compile('org.springframework.boot:spring-boot-starter-data-jpa')
+//    compile('org.springframework.boot:spring-boot-starter-mustache')
+//    compile('com.h2database:h2')
+//
+//    compile('org.springframework.boot:spring-boot-starter-oauth2-client')
+//    compile('org.springframework.session:spring-session-jdbc')
+//
+//    compile("org.mariadb.jdbc:mariadb-java-client")
+//
+//    testCompile('org.springframework.boot:spring-boot-starter-test')
+//    testCompile("org.springframework.security:spring-security-test")
+
     compile('org.springframework.boot:spring-boot-starter-web')
+    compile('org.projectlombok:lombok')
+    compile('org.springframework.boot:spring-boot-starter-data-jpa')
+    compile('com.h2database:h2')
+
     testCompile('org.springframework.boot:spring-boot-starter-test')
 }

@@ -1,18 +1,1 @@
 rootProject.name = 'grdale_project_01'
-
-//pluginManagement {
-//    plugins {
-//        id "org.springframework.cloud.contract" version "${verifierVersion}"
-//    }
-//    repositories {
-//        //to pick from local .m2
-//        mavenLocal()
-//        //for snapshots
-//        maven { url "https://repo.spring.io/snapshot" }
-//        //for milestones
-//        maven { url "https://repo.spring.io/milestone" }
-//        //for GA versions
-//        gradlePluginPortal()
-//    }
-//}
-
